@@ -26,7 +26,7 @@
             <% end %>
           </td>
           <td><%= image_tag author.profile_picture, size: "100x100" %></td>
-          <td><%= link_to "Edit", edit_author_path(author), class: "btn btn-outlinewarning" %></td>
+          <td><%= link_to "Edit", edit_author_path(author), class: "btn btn-outline-warning" %></td>
           <td><%= link_to "Delete", author_path(author), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-danger" %></td>
         </tr>
       <% end %>

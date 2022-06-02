@@ -3,12 +3,15 @@
     <strong>Name:</strong>
     <%= author.name %>
   </p>
+  <hr />
   <p>
     <strong>Address:</strong>
     <%= author.address %>
   </p>
+  <hr />
   <p>
     <strong>Profile picture:</strong>
     <%= image_tag author.profile_picture, size: "100x100" if author.profile_picture.attached? %>
   </p>
+  <hr />
 </div>

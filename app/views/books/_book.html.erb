@@ -3,14 +3,17 @@
     <strong>Name:</strong>
     <%= book.name %>
   </p>
+  <hr />
   <p>
     <strong>Cover Photos:</strong>
     <% book.cover_photos.each do |image|%>
       <%= image_tag image, size: "100x100"%>
     <% end %>
   </p>
+  <hr />
   <p>
     <strong>Author:</strong>
     <%= book.author.name%>
   </p>
+  <hr />
 </div>
