@@ -1,0 +1,16 @@
+<div id="<%= dom_id book %>">
+  <p>
+    <strong>Name:</strong>
+    <%= book.name %>
+  </p>
+  <p>
+    <strong>Cover Photos:</strong>
+    <% book.cover_photos.each do |image|%>
+      <%= image_tag image, size: "100x100"%>
+    <% end %>
+  </p>
+  <p>
+    <strong>Author:</strong>
+    <%= book.author.name%>
+  </p>
+</div>

@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+<div class="d-flex justify-content-between align-items-center">
+  <h1>Books</h1>
+  <%= link_to "New book", new_book_path, class: "btn btn-primary me-2" %>
+</div>
+<div id="books">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Photos</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @books.each do |book|%>
+        <tr>
+          <td><%= book.name%></td>
+          <td><%= book.author.name %></td>
+          <td>
+            <% book.cover_photos.each do |image| %>
+              <%= image_tag image, size: "100x100" %>
+            <% end %>
+          </td>
+          <td><%= link_to "Edit", edit_book_path(book), class: "btn btn-outline-warning" %></td>
+          <td><%= link_to "Delete", book_path(book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-danger" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

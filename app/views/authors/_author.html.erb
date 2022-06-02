@@ -1,0 +1,14 @@
+<div id="<%= dom_id author %>">
+  <p>
+    <strong>Name:</strong>
+    <%= author.name %>
+  </p>
+  <p>
+    <strong>Address:</strong>
+    <%= author.address %>
+  </p>
+  <p>
+    <strong>Profile picture:</strong>
+    <%= image_tag author.profile_picture, size: "100x100" if author.profile_picture.attached? %>
+  </p>
+</div>
